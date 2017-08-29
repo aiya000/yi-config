@@ -1,0 +1,6 @@
+[submodule "yi-rope"]
+	path = yi-rope
+	url = https://github.com/aiya000/yi-rope
+[submodule "yi-origin"]
+	path = yi-origin
+	url = https://github.com/aiya000/yi
