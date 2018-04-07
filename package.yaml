@@ -5,26 +5,6 @@ maintainer: aiya000.develop@gmail.com
 github: aiya000/dotfiles
 category: Yi
 
-ghc-options: -Wall -ferror-spans -threaded
-
-flags:
-  vty:
-    description: Include the vty (CLI) frontend
-    manual: True
-    default: True
-  pango:
-    description: Include the pango (GUI) frontend
-    manual: True
-    default: True
-  vim:
-    description: Include the vim keymap
-    manual: True
-    default: True
-  emacs:
-    description: Include the emacs keymap
-    manual: True
-    default: True
-
 dependencies:
     - base >= 4.8 && < 5
     - cmdargs
@@ -46,20 +26,6 @@ dependencies:
     - unordered-containers
     - text
     - easy-file
-
-when:
-  - condition: flag(vty)
-    dependencies: yi-frontend-vty
-    cpp-options: -DVTY
-  - condition: flag(pango)
-    dependencies: yi-frontend-pango
-    cpp-options: -DPANGO
-  - condition: flag(vim)
-    dependencies: yi-keymap-vim
-    cpp-options: -DVIM
-  - condition: flag(emacs)
-    dependencies: yi-keymap-emacs
-    cpp-options: -DEMACS
 
 executables:
     yi:

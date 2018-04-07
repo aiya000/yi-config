@@ -1,18 +1,21 @@
-resolver: lts-7.1
+flags: {}
 packages:
-- '.'
-- location: './yi-origin'
+- .
+- location: ./yi-origin
   subdirs:
-    - 'yi-core'
-    - 'yi-frontend-vty'
-    - 'yi-frontend-pango'
-    - 'yi-keymap-vim'
-    - 'yi-keymap-emacs'
-    - 'yi-misc-modes'
-    - 'yi-mode-haskell'
-    - 'yi-mode-javascript'
-- location: '.'
+  - yi-core
+  - yi-frontend-vty
+  - yi-frontend-pango
+  - yi-keymap-vim
+  - yi-keymap-emacs
+  - yi-misc-modes
+  - yi-mode-haskell
+  - yi-mode-javascript
+- location: .
   subdirs:
-    - 'yi-rope'
+  - yi-rope
 extra-deps:
-- optparse-applicative-0.13.0.0
+- gio-0.13.4.1
+- gtk-0.14.7
+- yi-language-0.17.1
+resolver: lts-11.3
